@@ -1,0 +1,46 @@
+## 1.0.0-development.1 (2023-06-16)
+
+
+### Features
+
+* [[#54382](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/issues/54382)] Implement a Community resource and Vendor Contacts lists layout for Property Page with delete functionality ([7881e52](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/7881e52633a9f8f46a389fcd88d7a458e4e19790))
+* [[#55532](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/issues/55532)] Integrate Evacuations ([6d7b8d7](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/6d7b8d719586c1c7951d7222d3d6acb8029afd93))
+* [54401] Relocations functionality ([9e6e24b](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/9e6e24b3e414e28297801bf58380584d4a194b47))
+* [55458] Add HTML viewer component, integrate with procedures and relocations. Add Wysiwyg and integrate in all required places. ([924a52a](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/924a52aafb999c8c13caad6d353f86f0feda341b))
+* [55519] Shut-offs functionality ([1ff32c0](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/1ff32c0b4ab4f9132c5186996aa1d8419061a210))
+* [55541] Alarms on mobile ([b9bbbdc](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/b9bbbdc2451b16baac1404108d2a7fcdfd3d5805))
+* [55550] Master Policy and Insurance Policy on mobile. ([67d1e1e](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/67d1e1efab508b5e93d4ebc7068373819976f58f))
+* [55602] Implement new design for biometric modal ([250a7c7](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/250a7c7189f2c25ba15d32cde5d96499034cf5b4))
+* [55981] Add network status context and status icon. ([9bbc441](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/9bbc4414046b43eadac41954e5b812c189f7ad1b))
+* [55996] Add push notifications with permissions. Add device token handling ([4bf3331](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/4bf3331eccf503f078bcb0b88b979271adb9d214))
+* 53786: Building and Tenant space pages ([5283aff](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/5283afff22c196aaaa939bcfb2eb6d3053e88a13))
+* 54749: Add loading state for header ([c7998a2](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/c7998a2e47f65ede4e4864c930217ea4a2ec5880))
+* 54751: Add AddressAutocomplete component and integrate with the AddressForm.tsx ([75638df](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/75638dfbfa30314501180d3d0a9a1087203a7aed))
+* 54761: Dashboard - implement click events for visits and last edits. ([6b4174e](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/6b4174ed059d8200e72239bfee105f1de2d27d57))
+* Add and Invite team member functionality ([bce933e](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/bce933e63f931b66267be81f3c4c6feda5e472b1))
+* Add call list functionality. Add user filter component. ([010d991](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/010d9913a4f414fb681e017c9bb44c1e92bfafcb))
+* add company navigation. ([711b740](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/711b740c9d5c2e484d87c2d63f33827cd31ed53c))
+* Add hazardous materials list and actions. ([d6c9896](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/d6c98969c2d0d0fca771652d5553246881663989))
+* add media tab ([c90c983](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/c90c983f3c510f48cd6776ecc001f55530e9383e))
+* Add profile page, edit profile and change password. ([e94fd69](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/e94fd69b830c71fc5aa6b4cc09b6fd3469431633))
+* Add useIsTabActive hook and integrate with all tabs ([c1efe90](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/c1efe90a229003b4070ad59aab3af950db2f6e10))
+* Basic components(Modal, ActionSheet, Lists, etc). Dashboard implementation ([e3eccaa](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/e3eccaac95212eed9048d8e56be5276028991d45))
+* Biometric Login. ([f012451](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/f012451ba8e755b0be73a29f6d5d2a4658ce970b))
+* Change password feature ([34acc82](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/34acc8205caf0d9f5708a749372fc021036b1391))
+* Command centers functionality. ([65c08a1](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/65c08a1481bd4c00fe706f2728128ae41faefde0))
+* Lock portrait view for devices. ([1e42da6](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/1e42da66e48d8c8ee4a193f2e0c4c69dfeb25bba))
+* Property page. Add/Edit forms ([96940da](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/96940dada522bd61c321b3e104458c5b73ee64b6))
+* Shelter in place entity. ([7ccd567](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/7ccd5674a61e4fb10b7ead47cc0d6eca2318026a))
+
+
+### Bug Fixes
+
+* Add validation for location. Replace location with address component in Relocations. ([60ae73e](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/60ae73e29aae9f3b0a14ea768835475ed77cc700))
+* Apply general fixes and fixes for properties, team and media contact. Add save state functionality for layout switcher. ([2faec55](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/2faec55082b7b4d33e3a4dcb30e68b7a2e3fb964))
+* biometric wording update. properties sorting componen name save, form... ([2719e70](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/2719e7024fc7f86b00bd614821e3a1beb4b94575))
+* Change team view and remove team grid. ([b46c868](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/b46c86843697d54ad0ed31b6f15ce90a102c36ff))
+* Fix property screens. Add header image. ([b5e2da5](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/b5e2da55c8e38a4875f700a6cce4ad03c848eb17))
+* integrate team permissions with add options. ([40e2860](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/40e28606db2a796542600e76e22e538dafbf4220))
+* Profile page fixes. ([791b70d](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/791b70de2ef672b6361505d6ed50c51ca719e3e1))
+* shelters title and field label in view mode. ([2406d88](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/2406d887376a99f079fd9965c5cbb9bc58c98ec9))
+* update datacore lib ([24de004](https://gitlab.gluzdov.com/securecore-new-application/securecore-mobile/commit/24de0041f88baf8ab65668742f750c53807250c4))

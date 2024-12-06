@@ -1,0 +1,1 @@
+export {RelocationsList} from './RelocationsList';

@@ -1,0 +1,102 @@
+image: node:18-alpine
+
+stages:
+  - setup
+  - quality
+  - release
+  - distribute
+
+.cache: &cache
+  cache:
+    key: '${CI_PROJECT_NAME}-${CI_COMMIT_REF_NAME}-${APP_NAME}-node_modules'
+    paths:
+      - ./node_modules/
+
+.dev-tag: &dev-tag
+  only:
+    - /^v(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)-development(.\d)$/
+
+.prepare: &prepare
+  <<: *cache
+  allow_failure: false
+  only:
+    - branches
+    - tags
+  tags:
+    - sf-mobile
+
+node_modules:
+  stage: setup
+  allow_failure: false
+  <<: *cache
+  script:
+    - node -v
+    - yarn install --pure-lockfile
+  tags:
+    - sf-mobile
+
+lint:
+  <<: *prepare
+  dependencies: [node_modules]
+  stage: quality
+  script:
+    - yarn install --pure-lockfile
+    - yarn lint
+
+tsc:
+  <<: *prepare
+  dependencies: [node_modules]
+  stage: quality
+  script:
+    - yarn install --pure-lockfile
+    - yarn tsc
+
+run release:
+  stage: release
+  allow_failure: false
+  only:
+    - development
+  tags:
+    - sf-mobile
+  script:
+    - yarn install --pure-lockfile
+    - yarn semantic-release
+  when: manual
+
+ios-beta:
+  stage: distribute
+  <<: *cache
+  allow_failure: false
+  dependencies: [ lint, tsc ]
+  script:
+    - cp ${APP_ENV} .env
+    - yarn install --pure-lockfile
+    - cd ios
+    - bundle install
+    - pod repo update
+    - pod install
+    - cd fastlane && cp ${IOS_FASTLANE_ENV} .env.default && cd ..
+    - bundle exec fastlane beta
+  <<: *dev-tag
+  tags:
+    - sf-mobile
+
+android-beta:
+  <<: *cache
+  allow_failure: false
+  stage: distribute
+  dependencies: [ lint, tsc ]
+  script:
+    - cp ${APP_ENV} .env
+    - yarn install --pure-lockfile
+    - cd android
+    - bundle install
+    - cp ${ANDROID_KEY_PROPERTIES} key.properties
+    - cd fastlane
+    - cp ${ANDROID_FASTLANE_ENV} .env.default
+    - cd ..
+    - echo ${ANDROID_KEY_STORE_FILE} | base64 -d > ./app/sc-upload-key.keystore
+    - bundle exec fastlane beta
+  <<: *dev-tag
+  tags:
+    - sf-mobile

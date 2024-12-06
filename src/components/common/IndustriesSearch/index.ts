@@ -1,0 +1,1 @@
+export {IndustriesSearch} from './IndustriesSearch';
